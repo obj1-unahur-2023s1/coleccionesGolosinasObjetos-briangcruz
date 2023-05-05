@@ -1,6 +1,85 @@
+import golosinas.*
 
-test "testX" {
+describe "test sobre el bombón"{
+	test "el peso inicial del bombón es de 15 gramos"{
+		assert.that(bombon.peso() == 15)
+	}
+	test "el precio del bombón es de 5 "{
+		assert.that(bombon.precio() == 5)
+	}
+	test "el gusto del bombon es frutilla" {
+		assert.that(bombon.gusto() == "frutilla")
+	}
+	test "el bombón es libre de gluten"{
+		assert.that(bombon.esLibreDeGluten())
+	}
+}
+describe "test sobre el alfajor"{
+	test "el peso inicial del alfajor es de 300 gramos"{
+		assert.that(alfajor.peso() == 300)
+	}
+	test "el precio del alfajor es de 12 "{
+		assert.that(alfajor.precio() == 12)
+	}
+	test "el gusto del alfajor es chocolate" {
+		assert.that(alfajor.gusto() == "chocolate")
+	}
+	test "el alfajor no es libre de gluten"{
+		assert.notThat(alfajor.esLibreDeGluten())
+	}
+}
+describe "test sobre el caramelo"{
+	test "el peso inicial del caramelo es de 5 gramos"{
+		assert.that(caramelo.peso() == 5)
+	}
+	test "el precio del caramelo es de 1 "{
+		assert.that(caramelo.precio() == 1)
+	}
+	test "el gusto del caramelo es frutilla" {
+		assert.that(caramelo.gusto() == "frutilla")
+	}
+	test "el caramelo es libre de gluten"{
+		assert.that(caramelo.esLibreDeGluten())
+	}
+}
 
-	assert.that(true)
+describe "test sobre el chupetin"{
+	test "el peso inicial del chupetines de 7 gramos"{
+		assert.that(chupetin.peso() == 7)
+	}
+	test "el precio del chupetin es de 2 "{
+		assert.that(chupetin.precio() == 2)
+	}
+	test "el gusto del chupetin es naranja" {
+		assert.that(chupetin.gusto() == "naranja")
+	}
+	test "el chupetin es libre de gluten"{
+		assert.that(chupetin.esLibreDeGluten())
+	}
+}
 
+describe "test sobre la oblea"{
+	test " el peso inicial de la oblea es de 250 gramos"{
+		assert.that(oblea.peso()== 250)
+	}
+	test "el precio de la oblea es de 5"{
+		assert.that(oblea.precio() == 5)
+	}
+	test "el gusto de la oblea es vainilla"{
+		assert.that(oblea.gusto() == "vainilla")
+	}
+	test "la oblea no es libre de gluten"{
+		assert.notThat(oblea.esLibreDeGluten())
+	}
+}
+
+describe "test de chocolatin"{
+	
+	method initialize(){
+		chocolatin.setPesoInicial(100)
+	}
+	test "el chocolatin con peso inicial en 100 vale 50"{
+		assert.equals(50, chocolatin.precio())
+	}
+	
 }

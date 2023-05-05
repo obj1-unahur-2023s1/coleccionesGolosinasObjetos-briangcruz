@@ -1,6 +1,23 @@
+import golosinas.*
+import mariano.*
 
-test "testX" {
-
-	assert.that(true)
-
+describe "test de mariano"{
+	method initialize(){
+		mariano.comprar(chupetin)
+		mariano.comprar(tutti)
+		mariano.comprar(oblea)
+	}
+	method lePintoLaGlotoneria(){
+		mariano.comprar(alfajor)
+		mariano.comprar(bombon)
+	}
+	
+	test "el peso total de la bolsa de mariano es de " {
+		assert.equals(262,mariano.pesoGolosinas())
+	}
+	
+	test "la bolsa ahora pesa 577"{
+		self.lePintoLaGlotoneria()
+		assert.equals(577, mariano.pesoGolosinas())
+	}
 }
